@@ -1,148 +1,449 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
-
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
-  <meta http-equiv="refresh" content="0; URL=https://www.monassistantnumerique.com/assistant-numerique/inclusion-numerique-menton/" />   
 
-  <title>Fabien Cambi</title>
+  <!-- SEO -->
+  <title>Fabien Cambi – Assistance Informatique &amp; Numérique | Menton, Monaco, Roquebrune</title>
+  <meta name="description" content="Fabien Cambi, ingénieur informatique indépendant : dépannage, conseil, formation numérique à Menton, Roquebrune-Cap-Martin et Monaco. Agrément SAP – crédit d'impôt 50 %.">
+  <meta name="keywords" content="assistance informatique Menton, dépannage informatique Monaco, formation numérique, conseils informatiques, inclusion numérique, Roquebrune-Cap-Martin, service à la personne, SAP">
+  <meta name="author" content="Fabien Cambi">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://toddoli.github.io/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://toddoli.github.io/">
+  <meta property="og:title" content="Fabien Cambi – Assistance Informatique &amp; Numérique">
+  <meta property="og:description" content="Dépannage, conseil et formation numérique à Menton, Monaco et Roquebrune-Cap-Martin. Agrément SAP – crédit d'impôt 50 %.">
+  <meta property="og:image" content="https://toddoli.github.io/img/profile.jpg">
+  <meta property="og:locale" content="fr_FR">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Fabien Cambi – Assistance Informatique &amp; Numérique">
+  <meta name="twitter:description" content="Dépannage, conseil et formation numérique à Menton, Monaco et Roquebrune-Cap-Martin.">
+  <meta name="twitter:image" content="https://toddoli.github.io/img/profile.jpg">
+
+  <!-- Schema.org LocalBusiness -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Fabien Cambi – Assistance Numérique",
+    "image": "https://toddoli.github.io/img/profile.jpg",
+    "description": "Ingénieur informatique indépendant proposant dépannage, conseil et formation numérique à Menton, Roquebrune-Cap-Martin et Monaco.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Roquebrune-Cap-Martin",
+      "addressRegion": "Alpes-Maritimes",
+      "postalCode": "06190",
+      "addressCountry": "FR"
+    },
+    "telephone": "+33767774692",
+    "email": "cambifabien@gmail.com",
+    "url": "https://toddoli.github.io/",
+    "areaServed": ["Menton", "Monaco", "Roquebrune-Cap-Martin", "Alpes-Maritimes"],
+    "priceRange": "€€",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Services informatiques",
+      "itemListElement": [
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Dépannage informatique"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Formation numérique"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Installation et configuration"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Conseil en réseau d'entreprise"}}
+      ]
+    }
+  }
+  </script>
 
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Custom fonts for this template -->
-  <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet">
+  <!-- Custom fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed:wght@500;700&family=Muli:wght@400;400i;800;800i&display=swap" rel="stylesheet">
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
-
-  <!-- Custom styles for this template -->
+  <!-- Custom styles -->
   <link href="css/resume.min.css" rel="stylesheet">
+  <style>
+    :root {
+      --violet: #8181F7;
+      --violet-dark: #6060d4;
+      --bg-dark: #1A1A1A;
+      --bg-card: #242424;
+      --text-light: #DCDCDC;
+      --text-muted: #9a9a9a;
+    }
 
-  <!-- Global site tag (gtag.js) - Google Analytics -->
+    body { background-color: var(--bg-dark); }
+
+    /* Hero CTA */
+    .btn-primary-cta {
+      display: inline-block;
+      background: var(--violet);
+      color: #fff;
+      padding: .75rem 2rem;
+      border-radius: 2rem;
+      font-weight: 800;
+      text-decoration: none;
+      transition: background .2s, transform .15s;
+    }
+    .btn-primary-cta:hover { background: var(--violet-dark); color: #fff; transform: translateY(-2px); text-decoration: none; }
+    .btn-outline-cta {
+      display: inline-block;
+      border: 2px solid var(--violet);
+      color: var(--violet);
+      padding: .7rem 1.8rem;
+      border-radius: 2rem;
+      font-weight: 800;
+      text-decoration: none;
+      transition: all .2s;
+      margin-left: .75rem;
+    }
+    .btn-outline-cta:hover { background: var(--violet); color: #fff; text-decoration: none; }
+
+    /* Service cards */
+    .service-card {
+      background: var(--bg-card);
+      border-left: 4px solid var(--violet);
+      border-radius: .5rem;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      transition: transform .2s, box-shadow .2s;
+    }
+    .service-card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(129,129,247,.2); }
+    .service-card .icon { font-size: 1.8rem; color: var(--violet); margin-bottom: .75rem; }
+    .service-card h3 { font-size: 1.4rem; color: #fff; margin-bottom: .5rem; }
+    .service-card p { color: var(--text-light); font-size: .95rem; margin: 0; }
+
+    /* Badge zones */
+    .zone-badge {
+      display: inline-block;
+      background: rgba(129,129,247,.15);
+      border: 1px solid rgba(129,129,247,.4);
+      color: var(--violet);
+      border-radius: 2rem;
+      padding: .3rem .9rem;
+      font-size: .85rem;
+      font-weight: 700;
+      margin: .2rem;
+    }
+
+    /* SAP block */
+    .sap-block {
+      background: var(--bg-card);
+      border-radius: .75rem;
+      padding: 1.5rem 2rem;
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .sap-block img { width: 80px; flex-shrink: 0; }
+    .sap-block p { margin: 0; color: var(--text-light); font-size: .95rem; }
+    .sap-block strong { color: var(--violet); }
+
+    /* Avantages */
+    .avantage-item { display: flex; align-items: flex-start; gap: 1rem; margin-bottom: 1.25rem; }
+    .avantage-item .check { color: var(--violet); font-size: 1.2rem; margin-top: .1rem; flex-shrink: 0; }
+    .avantage-item p { margin: 0; color: var(--text-light); }
+
+    /* Contact card */
+    .contact-card {
+      background: var(--bg-card);
+      border-radius: .75rem;
+      padding: 2rem;
+      margin-bottom: 1.5rem;
+    }
+    .contact-card a { color: var(--violet); font-weight: 700; }
+    .contact-card a:hover { color: #fff; }
+    .contact-icon { font-size: 1.4rem; color: var(--violet); margin-right: .75rem; }
+
+    /* Section title accent */
+    h2 .accent { color: var(--violet); }
+
+    /* h1 style */
+    h1 span.text-primary { color: var(--violet) !important; }
+
+    /* Responsive tweaks */
+    @media (max-width: 767px) {
+      .sap-block { flex-direction: column; text-align: center; }
+      .btn-outline-cta { margin-left: 0; margin-top: .5rem; }
+    }
+  </style>
+
+  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-39561315-2"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'UA-39561315-2');
   </script>
-
-
 </head>
 
 <body id="page-top">
 
-	<img width="30%" src="img/profile-right.png" class="img-fluid float-right rounded-circle mt-5 mr-5 d-none d-sm-block" alt="Responsive image">
-  <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+  <!-- ===== NAVIGATION ===== -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav" aria-label="Navigation principale">
     <a class="navbar-brand js-scroll-trigger" href="#page-top">
       <span class="d-block d-lg-none">Fabien Cambi</span>
       <span class="d-none d-lg-block">
-        <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="img/profile.jpg" alt="">
+        <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="img/profile.jpg" alt="Photo de profil de Fabien Cambi">
       </span>
     </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Ouvrir le menu">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#enbref">En bref</a></li>
+        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#services">Services</a></li>
+        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#pourquoi">Pourquoi moi ?</a></li>
+        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">Contact</a></li>
         <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#enbref">En Bref</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#services">Services</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" target="_blank" href="tel:+33767774692"><i class="fa fa-phone" aria-hidden="true"></i></a>
+          <a class="nav-link" href="tel:+33767774692" aria-label="Appeler Fabien Cambi">
+            <i class="fa fa-phone" aria-hidden="true"></i>
+          </a>
         </li>
       </ul>
     </div>
   </nav>
 
   <div class="container-fluid p-0" style="background-color: #1A1A1A">
+
+    <!-- ===== EN BREF ===== -->
     <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="enbref">
       <div class="w-100">
-        <h1 class="mb-0">Fabien <span class="text-primary inline">Cambi</span></h1>
-<h3>Conseils, installation, configuration de matériels informatiques</h3>
-        <div class="subheading mb-5">
-            <span class="badge badge-pill badge-danger">Roquebrune-Cap-Martin</span>
-            <span class="badge badge-pill badge-secondary">Menton</span>
-            <span class="badge badge-pill badge-warning">Monaco</span>
-            <span class="badge badge-pill badge-success">et alentours...</span>
-        </div>
-<p>Peu importe votre niveau en informatique, que vous soyez un professionnel ou un particulier, je suis disponible pour vous conseiller, vous dépanner et vous former dans vos besoins numériques. Je possède une très large compréhension de l'informatique par mes expériences en tant qu'ingénieur informatique dans de grande entreprises que je met désormais au service des personnes et PME avec le plus d'écoute, de patience, d'humanisme et de professionnalisme possible.</p>
-<p>Mon agrément SAP (Service à la Personne) permet aux particuliers d'obtenir un crédit d'impots de 50% de mes services.</p>
-<img src="img/Traceur_SAP_web_rvb_jpg.jpg" alt"Traceur_SAP_web_rvb_jpg" class="img-fluid rounded-circle" height="30%" width="30%"/>
 
-</ul>
-<blockquote class="blockquote"></p>
-  <p class="text-justify mb-0"></p>
-</blockquote>
-        <div class="social-icons">
-          <a target="_blank" href="http://www.linkedin.com/in/fabiencambi">
+        <img width="28%" src="img/profile-right.png"
+          class="img-fluid float-right rounded-circle mt-3 mr-3 d-none d-sm-block"
+          alt="Fabien Cambi, assistant numérique">
+
+        <h1 class="mb-0">Fabien <span class="text-primary">Cambi</span></h1>
+        <h2 class="mb-3" style="font-size:1.6rem; color: var(--text-light); text-transform:none; font-family:'Muli',sans-serif; font-weight:400;">
+          Ingénieur informatique indépendant &amp; assistant numérique
+        </h2>
+
+        <div class="mb-4">
+          <span class="zone-badge"><i class="fas fa-map-marker-alt mr-1"></i>Roquebrune-Cap-Martin</span>
+          <span class="zone-badge">Menton</span>
+          <span class="zone-badge">Monaco</span>
+          <span class="zone-badge">et alentours</span>
+        </div>
+
+        <p style="color: var(--text-light); max-width: 700px; font-size: 1.05rem; line-height: 1.7;">
+          Que vous soyez particulier ou professionnel, je vous accompagne dans tous vos besoins numériques :
+          <strong style="color:#fff">dépannage, installation, configuration et formation</strong>.
+          Fort de mon expérience d'ingénieur dans de grandes entreprises, je mets mes compétences à votre service
+          avec écoute, patience et professionnalisme.
+        </p>
+        <p style="color: var(--text-light); max-width: 700px; font-size: 1.05rem; line-height: 1.7;">
+          Mon <strong style="color: var(--violet)">agrément SAP (Service à la Personne)</strong> vous permet,
+          en tant que particulier, de bénéficier d'un <strong style="color:#fff">crédit d'impôt de 50 %</strong> sur mes prestations.
+        </p>
+
+        <div class="mt-4 mb-4">
+          <a href="#contact" class="btn-primary-cta js-scroll-trigger">
+            <i class="fa fa-phone mr-2"></i>Me contacter
+          </a>
+          <a href="#services" class="btn-outline-cta js-scroll-trigger">
+            Voir mes services
+          </a>
+        </div>
+
+        <div class="social-icons mt-4">
+          <a target="_blank" rel="noopener noreferrer" href="http://www.linkedin.com/in/fabiencambi" aria-label="LinkedIn de Fabien Cambi">
             <i class="fab fa-linkedin-in"></i>
           </a>
-          <a target="_blank" href="https://www.facebook.com/profile.php?id=61564992274655">
+          <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/profile.php?id=61564992274655" aria-label="Facebook de Fabien Cambi">
             <i class="fab fa-facebook-f"></i>
           </a>
-          <a target="_blank" href="https://github.com/toddoli">
+          <a target="_blank" rel="noopener noreferrer" href="https://github.com/toddoli" aria-label="GitHub de Fabien Cambi">
             <i class="fab fa-github"></i>
           </a>
-          <a target="_blank" href="tel:+33767774692">
-            <i class="fa fa-phone" aria-hidden="true"></i>
+          <a href="tel:+33767774692" aria-label="Téléphone">
+            <i class="fa fa-phone"></i>
           </a>
         </div>
+
       </div>
     </section>
     <hr class="m-0">
 
-<section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="services">
+    <!-- ===== SERVICES ===== -->
+    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="services">
       <div class="w-100">
-        <h2 class="mb-5">Services</h2>
+        <h2 class="mb-5">Mes <span class="accent">Services</span></h2>
 
-        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
-          <div class="resume-content">
-            <h3 class="mb-0">Conseils</h3>
-            <p>N'hésitez pas à me contacter pour tous types de conseils liés au numérique. Que cela concerne votre ordinateur, votre téléphone ou tablette, vos équipements à domicile. Mais aussi votre réseau informatique d'entreprise, la gestion et le partage de vos données d'entreprise etc...</p>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="service-card">
+              <div class="icon"><i class="fas fa-tools"></i></div>
+              <h3>Dépannage informatique</h3>
+              <p>Ordinateur lent, virus, panne matérielle ou logicielle, problème de démarrage… Je diagnostique et répare vos équipements rapidement, à domicile ou à distance.</p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="service-card">
+              <div class="icon"><i class="fas fa-graduation-cap"></i></div>
+              <h3>Formation numérique</h3>
+              <p>Apprendre à utiliser un smartphone, une tablette, un ordinateur, les réseaux sociaux ou les services en ligne. Des cours personnalisés à votre rythme, quel que soit votre niveau.</p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="service-card">
+              <div class="icon"><i class="fas fa-cogs"></i></div>
+              <h3>Installation &amp; configuration</h3>
+              <p>Mise en place de nouveaux équipements (PC, Mac, imprimantes, box, NAS…), configuration de logiciels, migration de données et sauvegarde.</p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="service-card">
+              <div class="icon"><i class="fas fa-wifi"></i></div>
+              <h3>Réseau &amp; infrastructure</h3>
+              <p>Installation et optimisation de réseaux Wi-Fi, mise en place de VPN, partage de fichiers et sécurisation de votre réseau d'entreprise ou domicile.</p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="service-card">
+              <div class="icon"><i class="fas fa-shield-alt"></i></div>
+              <h3>Sécurité &amp; protection</h3>
+              <p>Antivirus, pare-feu, sauvegarde automatique, sensibilisation aux arnaques en ligne. Protégez vos données personnelles et professionnelles.</p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="service-card">
+              <div class="icon"><i class="fas fa-comments"></i></div>
+              <h3>Conseil &amp; accompagnement</h3>
+              <p>Vous ne savez pas quel équipement acheter ou quelle solution adopter ? Je vous guide pour faire les meilleurs choix selon votre budget et vos besoins.</p>
+            </div>
           </div>
         </div>
 
-  </div>
-</section>
-
-<section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="contact">
-      <div class="w-100">
-        <h2 class="mb-5">Contact</h2>
-
-        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
-          <div class="resume-content">
-            <p>Email: <a href="mailto:cambifabien@gmail.com">cambifabien@gmail.com</a></p>
-            <p>Téléphone: <a href="tel:+33767774692">+33 7 67 77 46 92</a></p>
+        <!-- SAP -->
+        <div class="sap-block">
+          <img src="img/Traceur_SAP_web_rvb_jpg.jpg" alt="Logo agrément Service à la Personne">
+          <div>
+            <p>
+              <strong>Crédit d'impôt de 50 % pour les particuliers</strong><br>
+              Grâce à mon agrément <strong>Service à la Personne (SAP)</strong>, les particuliers peuvent déduire
+              50 % du coût de mes interventions de leurs impôts. Une aide concrète pour accéder à l'accompagnement numérique.
+            </p>
           </div>
         </div>
 
-    <a href="https://www.depannagedegeek.fr">Référencé sur Depannagedegeek.fr</a>
+      </div>
+    </section>
+    <hr class="m-0">
 
-  </div>
-</section>
+    <!-- ===== POURQUOI MOI ===== -->
+    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="pourquoi">
+      <div class="w-100">
+        <h2 class="mb-5" style="font-size:2.8rem;">Pourquoi <span class="accent">me choisir ?</span></h2>
+
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="avantage-item">
+              <span class="check"><i class="fas fa-check-circle"></i></span>
+              <p><strong style="color:#fff">Expérience d'ingénieur en entreprise</strong><br>
+                Des années passées dans de grandes entreprises me permettent d'apporter des solutions robustes et éprouvées.</p>
+            </div>
+            <div class="avantage-item">
+              <span class="check"><i class="fas fa-check-circle"></i></span>
+              <p><strong style="color:#fff">Pédagogie &amp; patience</strong><br>
+                Je m'adapte à votre niveau, sans jargon technique inutile. L'objectif : que vous soyez autonome.</p>
+            </div>
+            <div class="avantage-item">
+              <span class="check"><i class="fas fa-check-circle"></i></span>
+              <p><strong style="color:#fff">Intervention à domicile</strong><br>
+                Je me déplace chez vous à Menton, Roquebrune-Cap-Martin, Monaco et dans les communes environnantes.</p>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="avantage-item">
+              <span class="check"><i class="fas fa-check-circle"></i></span>
+              <p><strong style="color:#fff">Tarif transparent</strong><br>
+                Devis gratuit avant toute intervention. Pas de mauvaise surprise.</p>
+            </div>
+            <div class="avantage-item">
+              <span class="check"><i class="fas fa-check-circle"></i></span>
+              <p><strong style="color:#fff">Disponibilité &amp; réactivité</strong><br>
+                Prise en charge rapide pour limiter vos interruptions, que ce soit pour un particulier ou une PME.</p>
+            </div>
+            <div class="avantage-item">
+              <span class="check"><i class="fas fa-check-circle"></i></span>
+              <p><strong style="color:#fff">Référencé sur Depannagedegeek.fr</strong><br>
+                <a href="https://www.depannagedegeek.fr" target="_blank" rel="noopener noreferrer">Voir mon profil</a></p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <hr class="m-0">
+
+    <!-- ===== CONTACT ===== -->
+    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="contact">
+      <div class="w-100">
+        <h2 class="mb-5">Me <span class="accent">Contacter</span></h2>
+
+        <p style="color: var(--text-light); max-width: 600px; margin-bottom: 2rem;">
+          Vous avez une question ou souhaitez un devis gratuit ? N'hésitez pas à me contacter par téléphone ou par e-mail.
+          Je vous réponds dans les meilleurs délais.
+        </p>
+
+        <div class="row">
+          <div class="col-md-5">
+            <div class="contact-card">
+              <p><i class="fas fa-phone contact-icon"></i>
+                <a href="tel:+33767774692">+33 7 67 77 46 92</a>
+              </p>
+              <p style="color: var(--text-muted); font-size:.9rem; margin: 0 0 0 2.8rem;">Du lundi au samedi, 9h–19h</p>
+            </div>
+            <div class="contact-card">
+              <p><i class="fas fa-envelope contact-icon"></i>
+                <a href="mailto:cambifabien@gmail.com">cambifabien@gmail.com</a>
+              </p>
+            </div>
+            <div class="contact-card">
+              <p style="margin:0;"><i class="fas fa-map-marker-alt contact-icon"></i>
+                <span style="color: var(--text-light);">Roquebrune-Cap-Martin &amp; environs<br>
+                  <small style="color: var(--text-muted);">Menton · Monaco · Alpes-Maritimes</small>
+                </span>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="social-icons mt-4">
+          <a target="_blank" rel="noopener noreferrer" href="http://www.linkedin.com/in/fabiencambi" aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/profile.php?id=61564992274655" aria-label="Facebook">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a target="_blank" rel="noopener noreferrer" href="https://github.com/toddoli" aria-label="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="tel:+33767774692" aria-label="Téléphone">
+            <i class="fa fa-phone"></i>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+  </div><!-- /container-fluid -->
 
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-  <!-- Plugin JavaScript -->
   <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-
-  <!-- Custom scripts for this template -->
   <script src="js/resume.min.js"></script>
 
 </body>
-
 </html>
