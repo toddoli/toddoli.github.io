@@ -541,14 +541,12 @@
           d'une conférence ou d'un atelier. Vous recevrez une confirmation par e-mail.
         </p>
         <div class="rdv-card">
-          <!-- Start of Meetings Embed Script -->
-          <div class="meetings-iframe-container" data-src="https://meetings-eu1.hubspot.com/fabien-cambi?embed=true"></div>
-          <script type="text/javascript" src="https://static.hsappstatic.net/MeetingsEmbed/ex/MeetingsEmbedCode.js"></script>
-          <!-- End of Meetings Embed Script -->
+          <!-- Calendly inline widget -->
+          <div class="calendly-inline-widget" data-url="https://calendly.com/fabiencambi/30min?primary_color=8181ef&hide_gdpr_banner=1" style="min-width:320px;height:700px;"></div>
         </div>
         <p style="color: var(--text-muted); font-size: .9rem; margin-top: 1rem;">
           Le calendrier ne s'affiche pas ?
-          <a href="https://meetings-eu1.hubspot.com/fabien-cambi" target="_blank" rel="noopener noreferrer">Ouvrir la prise de rendez-vous dans un nouvel onglet</a>
+          <a href="https://calendly.com/fabiencambi/30min" target="_blank" rel="noopener noreferrer">Ouvrir la prise de rendez-vous dans un nouvel onglet</a>
         </p>
       </div>
     </section>
@@ -605,6 +603,11 @@
 
       </div>
     </section>
+<!-- Calendly badge widget begin -->
+<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+<script type="text/javascript">window.onload = function() { Calendly.initBadgeWidget({ url: 'https://calendly.com/fabiencambi/30min?primary_color=8181ef', text: 'Prendre RDV', color: '#8181ef', textColor: '#ffffff', branding: true }); }</script>
+<!-- Calendly badge widget end -->
 
   </div><!-- /container-fluid -->
 
@@ -613,6 +616,16 @@
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
   <script src="js/resume.min.js"></script>
+
+  <!-- Calendly badge widget begin -->
+  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+  <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+  <script type="text/javascript">
+    window.addEventListener('load', function () {
+      Calendly.initBadgeWidget({ url: 'https://calendly.com/fabiencambi/30min?primary_color=8181ef', text: 'Prendre Rendez-Vous', color: '#8181ef', textColor: '#ffffff', branding: true });
+    });
+  </script>
+  <!-- Calendly badge widget end -->
 
 </body>
 </html>
