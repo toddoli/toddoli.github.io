@@ -167,6 +167,23 @@
     /* h1 style */
     h1 span.text-primary { color: var(--violet) !important; }
 
+    /* Prestations */
+    .presta-subtitle { font-size: 1.8rem; color: #fff; margin: 1rem 0 .25rem; }
+    .presta-meta { color: var(--text-muted); margin-bottom: 1.5rem; }
+    .presta-grid > div { display: flex; }
+    .presta-grid .service-card { width: 100%; }
+    .presta-num {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 2.2rem; height: 2.2rem; border-radius: 50%;
+      background: rgba(129,129,247,.15); color: var(--violet);
+      font-weight: 800; margin-bottom: .75rem;
+    }
+    .presta-list { list-style: none; padding: 0; margin: 0; }
+    .presta-list li { color: var(--text-light); font-size: .95rem; padding: .4rem 0 .4rem 1.4rem; position: relative; }
+    .presta-list li + li { border-top: 1px solid rgba(255,255,255,.06); }
+    .presta-list li::before { content: "›"; position: absolute; left: .2rem; color: var(--violet); font-weight: 800; }
+    .presta-list strong { color: #fff; }
+
     /* Responsive tweaks */
     @media (max-width: 767px) {
       .sap-block { flex-direction: column; text-align: center; }
@@ -202,6 +219,7 @@
       <ul class="navbar-nav">
         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#enbref">En bref</a></li>
         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#services">Services</a></li>
+        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#prestations">Prestations</a></li>
         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#pourquoi">Pourquoi moi ?</a></li>
         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">Contact</a></li>
         <li class="nav-item">
@@ -349,6 +367,115 @@
               Ce label atteste de mon engagement à aider les entreprises et particuliers dans leur transition numérique.
             </p>
           </div>
+        </div>
+
+      </div>
+    </section>
+    <hr class="m-0">
+
+    <!-- ===== PRESTATIONS ===== -->
+    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="prestations">
+      <div class="w-100">
+        <h2 class="mb-4">Mes <span class="accent">Prestations</span></h2>
+
+        <h3 class="presta-subtitle"><i class="fas fa-microphone-alt mr-2" style="color:var(--violet)"></i>Conférences thématiques</h3>
+        <p class="presta-meta">1 h à 1 h 30, avec questions-réponses</p>
+
+        <div class="row presta-grid">
+          <div class="col-md-6">
+            <div class="service-card">
+              <span class="presta-num">1</span>
+              <h3>L'intelligence artificielle sans jargon</h3>
+              <p>Ce que c'est, ce que ça sait faire ou non, et comment s'en servir au quotidien (ChatGPT, Claude, Le Chat de Mistral). Le sujet qui attire le plus en ce moment.</p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="service-card">
+              <span class="presta-num">2</span>
+              <h3>Arnaques en ligne : les reconnaître et s'en protéger</h3>
+              <p>Faux SMS (colis, Ameli, CPF), faux conseillers bancaires, arnaques sentimentales, et maintenant les voix et vidéos truquées par IA. Utile et rassurant pour les seniors.</p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="service-card">
+              <span class="presta-num">3</span>
+              <h3>Les écrans et nos enfants</h3>
+              <p>Temps d'écran, réseaux sociaux, jeux vidéo, contrôle parental, et comment en parler en famille. Idéalement un samedi matin.</p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="service-card">
+              <span class="presta-num">4</span>
+              <h3>Protéger sa vie privée sur Internet</h3>
+              <p>Données personnelles, cookies, réglages Facebook et Google, et ce que les applis savent de nous.</p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="service-card">
+              <span class="presta-num">5</span>
+              <h3>Fake news et esprit critique</h3>
+              <p>Vérifier une info ou une photo, repérer les images générées par IA. Peut être ouverte aux ados.</p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="service-card">
+              <span class="presta-num">6</span>
+              <h3>Le numérique et la planète</h3>
+              <p>Impact réel du numérique, réparation, reconditionné, sobriété.</p>
+            </div>
+          </div>
+        </div>
+
+        <h3 class="presta-subtitle mt-4"><i class="fas fa-users mr-2" style="color:var(--violet)"></i>Ateliers pratiques</h3>
+        <p class="presta-meta">Petits groupes de 6 à 10 personnes, chacun avec son appareil</p>
+
+        <div class="row presta-grid">
+          <div class="col-md-6">
+            <div class="service-card">
+              <div class="icon"><i class="fas fa-seedling"></i></div>
+              <h3>Débutants</h3>
+              <ul class="presta-list">
+                <li><strong>Bien démarrer avec son smartphone</strong> : réglages, agrandir le texte, appels vidéo, photos.</li>
+                <li><strong>Envoyer ses photos et les partager avec ses petits-enfants</strong> : WhatsApp, e-mail, albums partagés.</li>
+                <li><strong>L'e-mail sans stress</strong> : créer, lire, répondre, joindre un fichier, trier les spams.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="service-card">
+              <div class="icon"><i class="fas fa-file-signature"></i></div>
+              <h3>Vie pratique</h3>
+              <ul class="presta-list">
+                <li><strong>Démarches en ligne</strong> : FranceConnect, impots.gouv, Ameli, ANTS, avec un pas-à-pas sur un compte de démonstration.</li>
+                <li><strong>Sécuriser ses comptes</strong> : mots de passe, gestionnaire de mots de passe, double authentification.</li>
+                <li><strong>Acheter et vendre en ligne en sécurité</strong> : Leboncoin, Vinted, paiements, signes qui doivent alerter.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="service-card">
+              <div class="icon"><i class="fas fa-rocket"></i></div>
+              <h3>Pour aller plus loin</h3>
+              <ul class="presta-list">
+                <li><strong>Atelier IA pratique</strong> : rédiger un courrier, résumer un document, préparer un voyage ou une recette, et vérifier les réponses.</li>
+                <li><strong>Ranger et sauvegarder ses photos et ses fichiers</strong> : cloud, clé USB, ménage dans son téléphone.</li>
+                <li><strong>Faire son livre photo ou sa carte de vœux en ligne</strong>, idéal en novembre et décembre.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="service-card">
+              <div class="icon"><i class="fas fa-child"></i></div>
+              <h3>Familles et jeunes</h3>
+              <ul class="presta-list">
+                <li><strong>Atelier parents-enfants</strong> : mettre en place ensemble un contrôle parental et des règles d'écran.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-3">
+          <a href="#contact" class="btn-primary-cta js-scroll-trigger"><i class="fas fa-calendar-alt mr-2"></i>Organiser une conférence ou un atelier</a>
         </div>
 
       </div>
